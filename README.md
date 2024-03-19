@@ -94,25 +94,27 @@ As you evaluate my submission, please pay particular attention to the following 
 
 - **User Management**: These endpoints allow you to create and retrieve user information.
 
- ```
- POST https://risevest-submission-production.up.railway.app/api/v1/users
- GET https://risevest-submission-production.up.railway.app/api/v1/users
- ```
+```
+POST https://risevest-submission-production.up.railway.app/api/v1/users
+GET https://risevest-submission-production.up.railway.app/api/v1/users
+```
 
 - **Post Management**: These endpoints enable you to create and retrieve posts for all users.
 
- ```
- POST https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts
- GET https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts
- ```
+```
+POST https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts
+GET https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts
+```
 
 - **Commenting on Posts**: This endpoint allows you to add comments to a specific post.
 
- ```
- POST https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts/:postId/comments
- ```
+```
+POST https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts/:postId/comments
+```
 
 - **Optimized Query**
+  Used in [TopPost](src/services/use-case/post/post.service.ts)
+
 ```sql
 WITH latest_comments AS (
         SELECT posts."userId", posts.id AS postId, MAX(comments."createdAt") AS latestCommentTime
@@ -138,4 +140,13 @@ WITH latest_comments AS (
     FROM ranked_users
     WHERE rank <= 3;
 ```
+
+### Run test
+
+- Tests are stored in each controller folder
+
+```
+npm run test
+```
+
 These resources should provide you with a comprehensive view of my submission, allowing you to assess its quality and functionality.
