@@ -1,73 +1,52 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# RISEVEST SENIOR BACKEND TEST SUBMISSION
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+## Introduction
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+In this submission, I've decided to dive deeper into the world of [Uncle Bob's Clean Code Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). This approach, which blends ideas from hexagonal and onion architectures, focuses on keeping the business logic separate from the framework. For example, I've separated TypeORM and Redis from the core business logic, making it easier to switch to a different ORM or in-memory storage solution in the future.
 
-## Installation
+### Why Choose Uncle Bob's Clean Code Architecture?
 
-```bash
-$ npm install
-```
+- **Framework Independence**: This architecture ensures that your system isn't tied to any specific framework. Frameworks are seen as tools that can be easily swapped out, making your system more adaptable.
+- **Easier Testing**: It simplifies the process of setting up tests. I've started with some basic mock tests and plan to expand this to cover different parts of the codebase, ensuring thorough test coverage.
+- **Database Flexibility**: It allows for easy swapping of databases, offering flexibility in data storage solutions and making it easier to transition to different database technologies as needed.
 
-## Running the app
+---
 
-```bash
-# development
-$ npm run start
+## Exploring My Codebase
 
-# watch mode
-$ npm run start:dev
+### Controller
 
-# production mode
-$ npm run start:prod
-```
+- **Where to Find**: `src/controller`
+- **What It Does**: The controller acts as the entry point to my application. It's responsible for handling incoming requests and directing them to the right services.
 
-## Test
+### Core
 
-```bash
-# unit tests
-$ npm run test
+- **Where to Find**: `src/core`
+- **What It Does**: The core folder is where the building blocks of my application are stored. This includes abstract classes, entities, data transfer objects (DTOs), enums, environment variables, and types. These elements are crucial for defining the structure and behavior of the application.
 
-# e2e tests
-$ npm run test:e2e
+### Framework
 
-# test coverage
-$ npm run test:cov
-```
+- **Where to Find**: `src/framework`
+- **What It Does**: The framework folder is where the core frameworks used in my application are kept separate from the business logic. This separation makes it easier to maintain and potentially swap out frameworks. For example, it includes the integration with TypeORM for database operations.
 
-## Support
+### Services
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **Where to Find**: `src/services`
+- **What It Does**: The services folder is where the heart of the application's functionality resides. This is where data processing, business rules, and interactions with external services or databases are implemented.
 
-## Stay in touch
+## Getting Around the Codebase
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+To easily navigate through the different parts of the codebase, you can follow these links:
 
-## License
+- [Controller](src/controller)
+- [Core](src/core)
+- [Framework](src/framework)
+- [Services](src/services)
 
-  Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This structure is designed to make it easier for you to understand and navigate through the codebase, providing a clear and organized overview.
+
+
+### Setup Application 
+- **Clone Repository**: git clone 
