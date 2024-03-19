@@ -77,4 +77,12 @@ Now, your application should be up and running! You can access it through your w
 
 ### Submission Evaluation
 
-1. **Deployed Api Url**:
+To evaluate my submission, you can access the following resources:
+
+1. **Live API**: You can interact with the deployed API directly by visiting the [Live URL](https://gleaming-fish-wrap.cyclic.app). This will allow you to see the application in action and test its functionality.
+
+2. **Source Code**: The complete source code for this submission is available on [GitHub](https://github.com/GoodnessEzeokafor/risevest-senior-backend-test-submission). You can review the code, run it locally, or contribute to the project if you wish.
+
+3. **API Documentation**: For detailed information on the API endpoints, including request and response formats, you can refer to the [Postman Documentation](https://documenter.getpostman.com/view/24047717/2sA2xpU9fv). This documentation provides a comprehensive guide to understanding and using the API effectively.
+
+These resources should provide you with a comprehensive view of my submission, allowing you to assess its quality and functionality.
