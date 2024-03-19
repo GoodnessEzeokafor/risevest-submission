@@ -52,23 +52,23 @@ This structure is designed to make it easier for you to understand and navigate 
 Follow these simple steps to set up and run the application:
 
 1. **Clone the Repository**: First, you need to clone the repository to your local machine. Open your terminal and run the following command:
-   ```
+   ```bash
    git clone https://github.com/GoodnessEzeokafor/risevest-senior-backend-test-submission.git
    ```
 
 2. **Install Dependencies**: Once the repository is cloned, navigate into the project directory and install the necessary packages. You can do this by running:
-   ```
+   ```bash
    npm i
    ```
 
 3. **Configure Environment Variables**: Before running the application, you'll need to set up your environment variables. Copy the sample environment file and create a new `.env` file by running:
-   ```
+   ```bash
    cp .env.sample .env
    ```
    Then, open the `.env` file and fill in your specific configuration details.
 
 4. **Start the Server**: Finally, you're ready to start the server. Run the following command to start the application in development mode:
-   ```
+   ```bash
    npm run start:dev
    ```
 
