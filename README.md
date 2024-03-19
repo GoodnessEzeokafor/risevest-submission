@@ -82,7 +82,7 @@ Now, your application should be up and running! You can access it through your w
 
 To evaluate my submission, you can access the following resources:
 
-1. **Live API**: You can interact with the deployed API directly by visiting the [Live URL](risevest-submission-production.up.railway.app). This will allow you to see the application in action and test its functionality.
+1. **Live API**: You can interact with the deployed API directly by visiting the [Live URL](https://risevest-submission-production.up.railway.app). This will allow you to see the application in action and test its functionality.
 
 2. **Source Code**: The complete source code for this submission is available on [GitHub](https://github.com/GoodnessEzeokafor/risevest-senior-backend-test-submission). You can review the code, run it locally, or contribute to the project if you wish.
 
@@ -95,21 +95,21 @@ As you evaluate my submission, please pay particular attention to the following 
 - **User Management**: These endpoints allow you to create and retrieve user information.
 
  ```
- POST risevest-submission-production.up.railway.app/api/v1/users
- GET risevest-submission-production.up.railway.app/api/v1/users
+ POST https://risevest-submission-production.up.railway.app/api/v1/users
+ GET https://risevest-submission-production.up.railway.app/api/v1/users
  ```
 
 - **Post Management**: These endpoints enable you to create and retrieve posts for all users.
 
  ```
- POST risevest-submission-production.up.railway.app/api/v1/users/:id/posts
- GET risevest-submission-production.up.railway.app/api/v1/users/:id/posts
+ POST https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts
+ GET https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts
  ```
 
 - **Commenting on Posts**: This endpoint allows you to add comments to a specific post.
 
  ```
- POST risevest-submission-production.up.railway.app/api/v1/users/:id/posts/:postId/comments
+ POST https://risevest-submission-production.up.railway.app/api/v1/users/:id/posts/:postId/comments
  ```
 
 - **Optimized Query**
